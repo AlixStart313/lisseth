@@ -1,0 +1,27 @@
+p{
+    color:blueviolet; 
+  
+   }
+    .estilo-class{
+        color: darkorange;
+        font-family: fantasy;
+    }
+    #estilo-id{
+        color: palevioletred;
+        font-family: cursive;
+    }
+
+    p#aviso{
+        color: rgb(187, 32, 32);
+        font-family: Lucida Sans;
+    }
+    div #aviso2{
+        color: rgb(16, 155, 39);
+        font-family:Cambria;
+    }
+
+    div, #aviso,.estilo-class{
+        background-color: black;
+        font-family: Georgia;
+        color: antiquewhite;
+    }
