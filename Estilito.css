@@ -1,0 +1,27 @@
+h1{
+    font-family: Georgia;
+    color: blueviolet;
+}
+
+*{margin: 0;
+    padding: 0;
+}
+p span {
+
+    color: aquamarine;
+}
+ 
+. {
+    color: aqua;
+    font-family: 'Tahoma';
+}
+
+#estilito-id{
+
+    color: red;
+    font-family: 'cursive';
+}
+
+p#aviso{
+    color: yellow;
+    font-family: Verdana;}
