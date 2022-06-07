@@ -23,5 +23,16 @@ p span {
 }
 
 p#aviso{
-    color: yellow;
+    color: rgba(77, 5, 192, 0.822);
     font-family: Verdana;}
+
+div #aviso{
+    color: chocolate;
+    font-family: 'Franklin Gothic Medium';
+}
+
+div, #aviso{
+    background-color: black;
+    color: chocolate;
+    font-family: 'Franklin Gothic Medium';
+}

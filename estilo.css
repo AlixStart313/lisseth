@@ -1,0 +1,45 @@
+#griss{
+    color :white;
+    font-family: arial;
+    background-color:gray;
+    padding: 7px;
+    margin-top: -10px;
+    margin: -10px;
+}
+
+#negro{
+    color :white;
+    font-family: arial;
+    background-color: black;
+    padding: 7px;
+    margin: -10px;
+}
+
+#naranja{
+    color :white;
+    font-family:'Trebuchet MS';
+    background-color: orange;
+    padding: 7px;
+    margin: -10px;
+}
+
+#lorem{
+    font-family:'Trebuchet MS';
+    margin-top: 10px;
+    margin-right: 18px;
+
+    
+}
+
+#imagen{
+    margin-top: 10px;
+    margin-left: 18px;
+    float: left;
+}
+
+#ultimo{
+    margin-top: 280px;
+    margin-left: 28px;
+    font-family:'Trebuchet MS';
+}
+
