@@ -67,9 +67,31 @@ function holamundo(){
             elemento[i].style.color="white"
             elemento[i].style.background="black"
             elemento[i].style.borderRadius="3px"
-        }
-            
-
-
-        
+        }        
     }
+
+    function crearElemento() 
+        {
+            var elemento =document.getElementById("id-divs")
+            elemento.innerHTML='<br><Button>modificar</Button>'
+        }
+
+        function mofificarElementos() 
+        {
+            var elemento =document.getElementById("id-divs")
+            elemento.innerHTML='<br><Button>modificar</Button>'
+        }
+
+        function mensajeClick(){
+                alert ( "Hola desde mensajeClick")
+        }
+
+        function mensajesobre(){
+            alert ( "Hola desde onmouseover")
+        }
+
+        function mensajeCarga(){
+            alert ( "Por que recargas la pagina :)")
+            var elemento =document.getElementsByTagName("body")
+            elemento[0].style.background="black"
+        }
