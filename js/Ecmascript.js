@@ -8,28 +8,106 @@ function declararVar(){
 }
 
 function declararLet(){
-    var materia = "web"
+    let materia = "web"
     if (true){
         let materia = "BD"
         console.log(materia)
     }
-    let materia = "BD"
+    console.log(materia)
 }
 
 function declararConst(){
-    var materia = "web"
+    const materia = "web"
     if (true){
-        let materia = "BD"
+        const materia = "BD"
         console.log(materia)
     }
-    let materia = "BD"
+    console.log(materia)
 }
 
-function declararOBJ(){
+function declarOBJ(){
     const  persona  = {
         nombre :"Juan",
         apellido1 :"Vicente",
         colorf:"Red"
     }
 console.log(persona)
+console.log(persona.apellido1)
+
+persona.nombre="Arturo"
+console.log(persona)
+
+Object.defineProperty(persona, "nombre",{configurable: false, writable: false})
+persona.nombre="Mario"
+console.log(persona)
 }
+
+function sumanormal(a,b){
+    return (a+b);
+}
+
+console.log(sumanormal(4,19));
+
+let sumaFlecha =(a,b) => a+b;
+
+console.log(sumaFlecha(10,10));
+
+let sumaFlechaEx=(a,b) => {
+    return (a+b);
+}
+
+console.log(sumaFlechaEx(5,5));
+
+let multiplicar = (a,b) => console.log(a*b)
+multiplicar (5,6);
+
+//--------------------------Template literals------------------------
+
+let dia = "martes :(";
+let concatenado= `hoy es : ${dia}`;
+
+console.log(concatenado)
+
+let musica =(nombre,artista) => `Hola estoy escuchando ${nombre} de ${artista}`;
+
+console.log(musica("plan a","Paulo Londra"))
+
+console.log("primera linea \n segunda linea")
+
+console.log(`primera linea 
+ segunda linea`)
+
+
+ //-------------spread operator------------------
+
+ let miArreglo=[1,2,3,4,5];
+
+
+ let sumarArreglo= (a,b,c,d,e) => console.log(a+b+c+d+e);
+ console.log(miArreglo)
+  console.log(...miArreglo)
+
+  sumarArreglo(...miArreglo)
+
+  let otroArray = [10,11,12]
+
+  let miArreglo2 = [...miArreglo,7,8,9,...otroArray]
+
+  console.log(...miArreglo2)
+
+  //-----------Destructoracion------------------
+  const  celular={
+    modelo :"Galaxy note 10+",
+    marca: "samsumg",
+    precio: 10000,
+    color :"blanco"
+  }
+
+  let modelo = celular.modelo;
+
+  console.log(`el celular ${modelo} cuesta ${celular.precio}`);
+
+  const{marca,color} = celular;
+
+  console.log(`èl celular ${marca} es de color ${color}`)
+
