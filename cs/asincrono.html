@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>tabla de listaUsuarios</h1>
+    <table border="1">
+        <tr>
+            <th>nombre</th>
+            <th>Apellido</th>
+            <th>Correo electronico</th>
+            <th>foto</th>
+        </tr>
+        <tbody id="cuerpo"></tbody>
+    </table>
+</body>
+<script>
+    const obtenerUsuarios =async () =>{
+        const servicio="https://reqres.in/api/users?page=2"
+        try{
+            const response = await fetch(servicio,{
+                method: "GET",
+                headers: {"Content-Type": "application/json"}
+             } );
+         const json =await response.json()
+         console.log(json.data)
+         mostrar_Usuarios(json);
+        }catch(error){
+            console.log(error);
+        }
+    }
+    obtenerUsuarios().then((response) =>{console.log(response)})
+
+    // //forma recomendada 
+    // const mostrar_Usuarios = async() =>{
+    //     const listaUsuarios = await obtenerUsuarios();
+    //     console.log(listaUsuarios)
+    // }
+
+    function mostrar_Usuarios(json){
+        let info="";
+        for(let r of json.data){
+            info +=`
+            <tr>
+                <td> ${r.first_name} </td>
+                <td> ${r.last_name} </td>
+                <td> ${r.email} </td>
+                <td> ${r.avatar}</td>
+            </tr>` 
+        }
+
+        document.getElementById("cuerpo").innerHTML=info;
+    };
+
+   
+</script> 
+</html>

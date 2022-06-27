@@ -100,14 +100,21 @@ console.log(`primera linea
     modelo :"Galaxy note 10+",
     marca: "samsumg",
     precio: 10000,
-    color :"blanco"
+    color :"blanco",
+    memoria:{
+        ram: 2,
+        rom:16
+    }
   }
 
   let modelo = celular.modelo;
 
   console.log(`el celular ${modelo} cuesta ${celular.precio}`);
 
-  const{marca,color} = celular;
-
+  const{marca,color} = marca;
+  console.log(marca);
+const{ram,rom}= celular;
   console.log(`èl celular ${marca} es de color ${color}`)
 
+
+  
